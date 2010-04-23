@@ -1,0 +1,5 @@
+Mynotebook is a small and simple Perl-program intended for working with notes on the console. The program has command line interface.
+
+To run it type in the console './notebook.pl <text-file>' where <text-file> is optional argument which denotes file to edit. It will be created if necessary. Each line of the <text-file> is considered as one note. If <text-file> is omitted, './mynotes.txt' will be created.
+
+I hope this program will be useful for someone.
