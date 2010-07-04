@@ -1,11 +1,12 @@
 #!/usr/bin/perl -w
-## Mynotebook ver.1
+## Mynotebook ver.1.1
 ## by Xspeed, 2010.
 
 use Fcntl;
 my $DBfile = $ARGV[0] || './mynotes.txt';
 if (-e $DBfile) { die qq('$DBfile' is not a text file. Quit.\n) unless -T $DBfile; }
-
+my $color = "\033[1;33m"; #yellow
+my $col_end = "\033[0m";
 my %Commands = qw(	add a
 					find f
 					show s
@@ -33,7 +34,9 @@ while (($_=<STDIN>) !~ /^\s*$/) {
 		my $term = $1;
 		open (DB, $DBfile) || die "Can't open DB: $!\n";
 		while (<DB>) {
-			print ":$. $_" if m/$term/i;
+			if (/$term/i) {
+				print ":$. $`", $color, $&, $col_end, $';
+			}
 		}
 		close DB;
 	}
