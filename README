@@ -5,7 +5,7 @@ The program has command line interface. To run it type on the console './noteboo
 I hope this program will be useful for someone.
 ###############################################
 
-There is just four commands:
+There are just four commands:
 1. a => Add new note # i.e. a test record
 2. r => Remove note # i.e. r 3
 3. f => Find note # i.e. f <text>
