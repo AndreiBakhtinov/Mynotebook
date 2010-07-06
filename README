@@ -1,5 +1,27 @@
-Mynotebook is a small and simple Perl-program intended for working with notes on the console. The program has command line interface.
+Mynotebook is a small and simple Perl-program intended for working with notes on the console. 
 
-To run it type in the console './notebook.pl <text-file>' where <text-file> is optional argument which denotes file to edit. It will be created if necessary. Each line of the <text-file> is considered as one note. If <text-file> is omitted, './mynotes.txt' will be created.
+The program has command line interface. To run it type on the console './notebook.pl <text-file>' where <text-file> is optional argument which denotes file to edit. It will be created if necessary. Each line of the <text-file> is considered as one note. If <text-file> is omitted, './mynotes.txt' will be created.
 
 I hope this program will be useful for someone.
+###############################################
+
+There is just four commands:
+1. a => Add new note # i.e. a test record
+2. r => Remove note # i.e. r 3
+3. f => Find note # i.e. f <text>
+4. s => Show all notes
+
+Example:
+[xsp@localhost] $ ./notebook.pl
+-= My notebook =-
+* Втр Июл  6 20:03:14 MSD 2010
+* Editing: ./mynotes.txt
+* Notes: 0
+remove => r; show => s; add => a; find => f : a Ken Adams +12345                               
+remove => r; show => s; add => a; find => f : a do some job 
+remove => r; show => s; add => a; find => f : f job
+:2 do some job
+remove => r; show => s; add => a; find => f : s
+1 Ken Adams +12345
+2 do some job
+remove => r; show => s; add => a; find => f : 
